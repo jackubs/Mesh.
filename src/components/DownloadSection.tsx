@@ -12,7 +12,7 @@ const DownloadSection = () => (
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+          <a href="public/app-debug.apk" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground hover:opacity-90 transition-opacity">
             <Download size={18} />
             Download for Android
           </a>

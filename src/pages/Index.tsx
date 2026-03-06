@@ -1,14 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import MeshBackground from "@/components/MeshBackground";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import HowItWorks from "@/components/HowItWorks";
+import Features from "@/components/Features";
+import UseCases from "@/components/UseCases";
+import FounderSection from "@/components/FounderSection";
+import DownloadSection from "@/components/DownloadSection";
+import MeshFooter from "@/components/MeshFooter";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <div className="relative min-h-screen">
+    <MeshBackground />
+    <Navbar />
+    <HeroSection />
+    <div className="glow-line" />
+    <HowItWorks />
+    <div className="glow-line" />
+    <Features />
+    <div className="glow-line" />
+    <UseCases />
+    <div className="glow-line" />
+    <FounderSection />
+    <div className="glow-line" />
+    <DownloadSection />
+    <MeshFooter />
+  </div>
+);
 
 export default Index;

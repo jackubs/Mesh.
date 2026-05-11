@@ -1,23 +1,14 @@
 {
   "name": "mesh-landing",
-  "version": "1.0.0",
-  "description": "Mesh — Communication Without Internet. Peer-to-peer offline messaging app landing page.",
   "private": true,
+  "version": "1.0.0",
+  "description": "Mesh — Communication Without Internet. P2P offline messaging landing page.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [
-    "mesh",
-    "p2p",
-    "offline",
-    "messaging",
-    "landing-page"
-  ],
-  "author": "Yaakoubi Youssef",
-  "license": "MIT",
   "devDependencies": {
-    "vite": "^8.0.12"
+    "vite": "^6.0.0"
   }
 }

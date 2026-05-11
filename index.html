@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mesh — Communication Without Internet</title>
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Mesh is a peer-to-peer offline messaging app that connects devices directly via Bluetooth and WiFi Direct — no internet needed.">
+<meta name="author" content="Yaakoubi Youssef">
+<meta property="og:title" content="Mesh — Communication Without Internet">
+<meta property="og:description" content="Privacy-first P2P messaging that works offline. End-to-end encrypted, decentralized mesh network.">
+<meta name="theme-color" content="#030306">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%2300e5ff'/></svg>">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <canvas id="canvas"></canvas>
-
 <div id="cursor"></div>
-
-<div id="loading">
-  <span class="text">INITIALIZING MESH NETWORK<span class="cursor">_</span></span>
-</div>
-
+<div id="loading">INITIALIZING MESH NETWORK<span class="blink-cursor">_</span></div>
 <div id="flash"></div>
 
 <div id="welcome">
@@ -44,9 +44,7 @@
       <a href="#mitchow" class="nav-link">AI Companion</a>
       <a href="#download" class="nav-link nav-cta">Get Mesh</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -85,49 +83,49 @@
   </div>
   <div class="features-grid">
     <article class="feature-card" data-delay="0">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
       <h3>End-to-End Encrypted</h3>
       <p>ECDH + ECDSA key pairs via Web Crypto API. Messages route through any available transport.</p>
       <div class="feature-stat"><span class="stat-label">Encryption</span><span class="stat-value">AES-256</span></div>
     </article>
     <article class="feature-card" data-delay="1">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></div>
       <h3>Hybrid P2P Networking</h3>
       <p>Bluetooth, WiFi Direct, Supabase. Automatic mode switching across all transport layers.</p>
       <div class="feature-stat"><span class="stat-label">Transports</span><span class="stat-value">3</span></div>
     </article>
     <article class="feature-card" data-delay="2">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-4.42 3.58-8 8-8 1.07 0 2.09.21 3.07.6l1.41-1.41A9.847 9.847 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-2.63-1.03-5.01-2.69-6.81zM12 6v6l4.28 2.54.72-1.21-3.5-2.08V6H12z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-4.42 3.58-8 8-8 1.07 0 2.09.21 3.07.6l1.41-1.41A9.847 9.847 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-2.63-1.03-5.01-2.69-6.81zM12 6v6l4.28 2.54.72-1.21-3.5-2.08V6H12z"/></svg></div>
       <h3>Queue-First Architecture</h3>
       <p>Messages store locally, auto-send when a connection becomes available. Gateway mode relays.</p>
       <div class="feature-stat"><span class="stat-label">Delivery</span><span class="stat-value">99.7%</span></div>
     </article>
     <article class="feature-card" data-delay="0">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
       <h3>Message Hopping</h3>
       <p>Messages relay through nearby devices. No central servers, no single point of failure.</p>
       <div class="feature-stat"><span class="stat-label">Hops</span><span class="stat-value">∞</span></div>
     </article>
     <article class="feature-card" data-delay="1">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg></div>
       <h3>AI Companion — Mitchow</h3>
       <p>Emotional AI companion with relationship system, memory, and 19 emotional states.</p>
       <div class="feature-stat"><span class="stat-label">Emotions</span><span class="stat-value">19</span></div>
     </article>
     <article class="feature-card" data-delay="2">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
       <h3>P2P Chess</h3>
       <p>Stockfish.js engine. Play against AI or P2P. Fully offline. Integrates with Mitchow.</p>
       <div class="feature-stat"><span class="stat-label">Engine</span><span class="stat-value">Stockfish</span></div>
     </article>
     <article class="feature-card" data-delay="0">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div>
       <h3>Audio Calls</h3>
       <p>Real-time P2P audio calls with Bluetooth and WiFi Direct audio transport.</p>
       <div class="feature-stat"><span class="stat-label">Latency</span><span class="stat-value">&lt;50ms</span></div>
     </article>
     <article class="feature-card" data-delay="1">
-      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h14v2H5zm0 4h14v2H5zm0 4h14v2H5zm0 4h10v2H5z"/></svg></div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M5 5h14v2H5zm0 4h14v2H5zm0 4h14v2H5zm0 4h10v2H5z"/></svg></div>
       <h3>QR Sharing & More</h3>
       <p>QR contact sharing, voice messages, notifications, dark/light theme, responsive UI.</p>
       <div class="feature-stat"><span class="stat-label">Platform</span><span class="stat-value">Android</span></div>
@@ -189,22 +187,22 @@
   </div>
   <div class="use-cases-grid">
     <div class="use-case" data-delay="0">
-      <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div>
+      <div class="uc-icon"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div>
       <h3>Internet Outages</h3>
       <p>When the internet goes down, Mesh keeps you connected. Your messages find a path through the mesh.</p>
     </div>
     <div class="use-case" data-delay="1">
-      <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="uc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
       <h3>Remote Areas</h3>
       <p>Mountains, forests, deserts — anywhere without cell coverage. Mesh creates its own network.</p>
     </div>
     <div class="use-case" data-delay="2">
-      <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div>
+      <div class="uc-icon"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div>
       <h3>Festivals & Events</h3>
       <p>Overloaded cell towers at concerts? Mesh offloads communication to the P2P layer.</p>
     </div>
     <div class="use-case" data-delay="3">
-      <div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-1.8C18 6.57 15.35 4 12 4s-6 2.57-6 6.2c0 2.34 1.95 5.44 6 9.14 4.05-3.7 6-6.8 6-9.14zM12 2c4.2 0 8 3.22 8 8.2 0 3.32-2.67 7.25-8 11.8-5.33-4.55-8-8.48-8-11.8C4 5.22 7.8 2 12 2z"/></svg></div>
+      <div class="uc-icon"><svg viewBox="0 0 24 24"><path d="M12 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-1.8C18 6.57 15.35 4 12 4s-6 2.57-6 6.2c0 2.34 1.95 5.44 6 9.14 4.05-3.7 6-6.8 6-9.14zM12 2c4.2 0 8 3.22 8 8.2 0 3.32-2.67 7.25-8 11.8-5.33-4.55-8-8.48-8-11.8C4 5.22 7.8 2 12 2z"/></svg></div>
       <h3>Emergency Situations</h3>
       <p>Natural disasters knock out infrastructure. Mesh is designed to work when nothing else does.</p>
     </div>
@@ -273,16 +271,13 @@
 
 <section id="download">
   <div class="cta-container">
-    <div class="cta-dot" id="ctaDot">
-      <span class="cta-eye left"></span>
-      <span class="cta-eye right"></span>
-    </div>
+    <div class="cta-dot" id="ctaDot"><span class="cta-eye left"></span><span class="cta-eye right"></span></div>
     <h2 class="cta-title">Join the Mesh.</h2>
     <p class="cta-sub">Beta available now on Android. iOS coming soon.</p>
     <p class="cta-desc">Communication Without Internet. Decentralized. Encrypted. Yours.</p>
     <div class="cta-actions">
-      <a href="#" class="btn-primary btn-download"><svg viewBox="0 0 24 24" fill="none" class="dl-icon"><path d="M18 9v4H6V9H4v6h16V9h-2z"/><path d="M12 3L7 8h3v5h4V8h3L12 3z"/></svg><span>Download for Android</span></a>
-      <a href="#" class="btn-secondary btn-download disabled"><svg viewBox="0 0 24 24" fill="none" class="dl-icon"><path d="M18 9v4H6V9H4v6h16V9h-2z"/><path d="M12 3L7 8h3v5h4V8h3L12 3z"/></svg><span>iOS — Coming Soon</span></a>
+      <a href="#" class="btn-primary btn-download"><svg viewBox="0 0 24 24" class="dl-icon"><path d="M18 9v4H6V9H4v6h16V9h-2z"/><path d="M12 3L7 8h3v5h4V8h3L12 3z"/></svg><span>Download for Android</span></a>
+      <a href="#" class="btn-secondary btn-download disabled"><svg viewBox="0 0 24 24" class="dl-icon"><path d="M18 9v4H6V9H4v6h16V9h-2z"/><path d="M12 3L7 8h3v5h4V8h3L12 3z"/></svg><span>iOS — Coming Soon</span></a>
     </div>
     <div class="cta-social">Founded by <strong>Yaakoubi Youssef</strong></div>
   </div>
@@ -299,6 +294,6 @@
 
 </div>
 
-<script type="module" src="script.js"></script>
+<script type="module" src="/script.js"></script>
 </body>
 </html>
